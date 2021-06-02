@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import studentsRoutes from './routes/students';
+import cartItemsRoutes from './routes/cart-items';
 
 // creates an Express application - allows us to create and and use APIs
 const app = express();
@@ -11,8 +11,9 @@ app.use(cors());
 // Allow JSON request bodies for PUT and POST
 app.use(express.json());
 
-//use the the router object (and all it's defined routes)
-app.use("/students", studentsRoutes);
+// use the the router object (and all it's defined routes)
+app.use("/cart-items", cartItemsRoutes);
+
 
 // define the port
 const port = 3000;
